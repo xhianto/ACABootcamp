@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="wrapper">
+        <div class="container">
+            <table class="people-list">
+                <tr>
+                    <th><i class="fas fa-eye"></i></th>
+                    <th>ID</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                </tr>
+            {% for person in people %}
+                <tr>
+                    <td><a href="{{ url_for('index', id=person.id) }}"><i class="fas fa-eye"></i></a></td>
+                    <td>{{ person.id }}</td>
+                    <td>{{ person.first_name }}</td>
+                    <td>{{ person.last_name }}</td>
+                    <td>{{ person.gender }}</td>
+                    <td>{{ person.dob|calc_age }}</td>
+                </tr>    
+            {% endfor %}
+            </table>
+            <div class="paging">
+                <div>Showing record <strong>{{ paging[0]}}</strong> to <strong>{{ paging[1] }}</strong> of <strong>{{ count }}</strong></div>
+                <div class="links">
+                    {% for i in range(1, paging[2]+1) %}
+                        <a href="{{ url_for('people_list', page=i) }}">{{ i }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

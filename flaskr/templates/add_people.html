@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="page-title">Add people to the database</div>
+    <form method="POST">
+        How many do you want to add (max. 10): <input type="text" name="qty" value="1" style="text-align:right;width:100px;">
+        <input type="submit" value="Add">
+    </form>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="show-count">
+                There are {{ row_count }} people in the database<br>
+                Showing person #{{ rows_before}}
+            </div>
+            <div class="person">
+                <div class="image"><img src="{{ url_for('static', filename='img/people/' + person.id|string + '.jpg') }}"></div>
+                <div class="name">{{ person.first_name }} {{ person.last_name }} ({{ person.dob|calc_age }})</div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Likes</td>
+                            <td>Dislikes</td>
+                        </tr>
+                        <tr>
+                            <td id="person_likes" style="text-align:center;">{{ person.likes }}</td>
+                            <td id="person_dislikes" style="text-align:center;">{{ person.dislikes }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="actions">
+                    <a href="#" class="act_like" data-personid="{{ person.id }}" title="Like {{ person.first_name }}"><i class="fas fa-thumbs-up"></i></a>
+                    <a href="#" class="act_dislike" data-personid="{{ person.id }}" title="Dislike {{ person.first_name }}"><i class="fas fa-thumbs-down"></i></a>
+                </div>
+            </div>
+            <div class="switch prv"><a href="{{ url_for('index', id=person.id, dir='prv') }}"><i class="fas fa-arrow-circle-left"></i></a></div>
+            <div class="switch nxt"><a href="{{ url_for('index', id=person.id, dir='nxt') }}"><i class="fas fa-arrow-circle-right"></i></a></div>
+        </div>
+    </div>
+
+{% endblock %}

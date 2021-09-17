@@ -1,0 +1,232 @@
+body {
+    font-family: open sans,helvetica neue,helvetica,arial,sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #0CA9F2;
+}
+header {
+    padding: 20px;
+    text-align: center;
+}
+header img {
+    vertical-align: middle;
+    width: 150px;
+}
+header div.branding {
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+}
+header div.title {
+    display: inline-block;
+    margin-left: 20px;
+    color: #FEDE59;
+}
+header div.nav a, .paging a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 4px 6px;
+    background-color: #FEDE59;
+    color: #000000;
+    text-decoration: none;
+}
+header div.nav a:hover, .paging a:hover {
+    text-decoration: underline;
+}
+.flashes {
+    margin: 0 20px 20px 20px;
+}
+.flashes ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.flashes li.error {
+    color: #B90200;
+}
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.content {
+    margin: 0 20px;
+}
+
+/* Homepage */
+.wrapper {
+    
+}
+.container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 600px;
+    /*border: solid 1px red;*/
+}
+.show-count {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.person {
+    margin: 0 70px;
+    padding: 20px 0;
+    background-color: #f8f8ff;
+    border-radius: 10px;
+}
+.person > div {
+    text-align: center;
+}
+.person .name {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 25px;
+}
+.person img {
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.75);
+}
+.person table {
+    margin: 0 auto;
+}
+.person table td {
+    padding: 2px 8px;
+}
+.switch {
+    position: absolute;
+    top: calc(50% - 25px);
+}
+.switch.prv {
+    left:0;
+}
+.switch.nxt {
+    right:0;
+}
+.switch a {
+    font-size: 50px;
+    color: #FEDE59;
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+}
+.actions {
+    margin-top: 40px;
+}
+.actions a {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 40px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.actions a.act_like {
+    color: #228B22;
+}
+.actions a.act_dislike {
+    color: #EE4B2B;
+}
+
+.swing {
+    font-weight: bold;
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+  
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.people-list {
+    border-collapse: collapse;
+    width: 100%;
+}
+.people-list td, .people-list th {
+    border: 1px solid #DDD;
+    padding: 8px;
+}
+.people-list tr:nth-child(even){
+    background-color: #26C3FF;
+}
+.people-list th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FEDE59;
+}
+.people-list th:first-child, .people-list td:first-child {
+    text-align: center;
+}
+.people-list a {
+    color: #FEDE59;
+}
+.people-list a:hover {
+    color: #000000;
+}
+.paging {
+    margin-top: 20px;
+    text-align: center;
+}
+.paging .links {
+    margin-top: 10px;
+}
